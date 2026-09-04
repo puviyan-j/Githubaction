@@ -6,5 +6,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: manualaction
+      - name: manual action
         run: echo "test manual action"
+
+      - name: print values
+        run: echo ${{runner.os}}
+
+
