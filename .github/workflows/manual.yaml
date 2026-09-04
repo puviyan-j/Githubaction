@@ -12,4 +12,29 @@ jobs:
       - name: print values
         run: echo ${{runner.os}}
 
+      - name: Runner information
+        run: |
+          echo "OS: ${{ runner.os }}"
+          echo "Architecture: ${{ runner.arch }}"
+          echo "Name: ${{ runner.name }}"
+          echo "Environment: ${{ runner.environment }}"
 
+      - name: System information
+        run: |
+          uname -a
+          lscpu
+          free -h
+          df -h
+          
+      - name: GitHub information
+        run: |
+         echo "Repository: ${{ github.repository }}"
+         echo "Owner: ${{ github.repository_owner }}"
+         echo "Branch: ${{ github.ref_name }}"
+         echo "Commit SHA: ${{ github.sha }}"
+         echo "Actor: ${{ github.actor }}"
+         echo "Event: ${{ github.event_name }}"
+         echo "Workflow: ${{ github.workflow }}"
+         echo "Run ID: ${{ github.run_id }}"
+         echo "Run Number: ${{ github.run_number }}"
+         echo "Attempt: ${{ github.run_attempt }}"
