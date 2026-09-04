@@ -1,0 +1,11 @@
+name: test
+
+on: workflow_dispatch
+
+jobs:
+  mytest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test github action # m
+        run: echo "hello github action"
+      
